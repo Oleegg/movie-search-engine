@@ -20,7 +20,7 @@ function showData(d) {
         const title = document.createElement('h2')
         title.classList.add('title-img')
         const average = document.createElement('p')
-        title.classList.add('title-img')
+        average.classList.add('average-img')
         const div = document.createElement('div')
         div.classList.add('wrapper-img')
         const divAbout = document.createElement('div')
