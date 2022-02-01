@@ -1,6 +1,12 @@
 let url = `https://api.themoviedb.org/3/search/movie?query=girls&api_key=58f80e50b7e31f11334091c645181f83`
 
 const contentGallery = document.querySelector('.content')
+const input = document.querySelector('.search__input')
+const buttonSearch = document.querySelector('.search__button')
+input.focus();
+input.select();
+
+buttonSearch.addEventListener('click', searchFilms)
 
 async function getData() {
     const res = await fetch(url);
@@ -10,13 +16,16 @@ async function getData() {
 }
 getData();
 
-
-
-//overview - описание...release_date...
-
+function searchFilms() {
+    url = `https://api.themoviedb.org/3/search/movie?query=${input.value}&api_key=58f80e50b7e31f11334091c645181f83`
+    getData()
+}
 
 function showData(d) {
+    let elem = document.querySelectorAll('.wrapper-img')
+    elem.forEach(el => el.remove())
     for (let i = 0; i < d.results.length; i++) {
+
         const title = document.createElement('h2')
         title.classList.add('title-img')
         const average = document.createElement('p')
