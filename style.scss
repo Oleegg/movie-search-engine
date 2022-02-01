@@ -83,11 +83,20 @@ body{
 }
 .main {
     flex: 1 1 auto;
+    margin: 0 auto;
 }
 .content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 0;
+    margin: 0 auto;
 }
 .gallery-img{
-    width: 30%;
+    width: 24%;
+    height: 400px;
+    object-fit: cover;
 }
 .footer {    
     display: flex;
