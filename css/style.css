@@ -166,8 +166,12 @@ body {
   color: azure;
 }
 
+.title-img {
+  font-size: 22px;
+}
+
 .average-img {
-  font-size: 30px;
+  font-size: 22px;
 }
 
 .footer {
